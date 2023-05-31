@@ -1,0 +1,13 @@
+{
+	"name": "my app",
+  	"start_url": "/",
+  	"id": "app",
+  	"display": "standalone",
+  	"icons": [
+      {
+        "src": "/vite.svg",
+        "type": "image/svg+xml",
+        "sizes": "512x512"
+      }
+    ]
+}
