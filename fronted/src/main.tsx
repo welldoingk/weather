@@ -1,16 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import LikeButton from './App.tsx'
-import './index.css'
-import Btn from './btn.tsx'
-import Test from './test.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import Test from "./Test.tsx";
 
-
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <LikeButton />
-    <Btn />
-    <LikeButton />
     <Test />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

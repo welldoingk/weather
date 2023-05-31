@@ -1,18 +1,65 @@
-import { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
+
+
 
 function Test() {
+  const [data, setData] = useState(null);
 
-  const getData = async () => {
-    const res = await fetch(
-      "http://localhost:8080/api/get"
-    ).then((res) =>  console.log(res), cons);
+  const getData2 = async () => {
+    await axios
+      .get("http://localhost:8080/api/get")
+      .then((res) => setData(res.data));
+    console.log(data);
     
   };
 
-  useEffect(() => {
-    getData(); //API 호출
-  }, []);
+  function Bb() {
+    return (
+      <>
+        <table>
+          <thead>
+            <tr>
+              <td>no</td>
+              <td>baseDate</td>
+              <td>baseTime</td>
+              <td>category</td>
+              <td>fcstDate</td>
+              <td>fcstTime</td>
+              <td>fcstValue</td>
+              <td>nx</td>
+              <td>ny</td>
+            </tr>
+          </thead>
+          <tbody>
+            {data &&
+              data.map((data) => (
+                <tr key={data.no}>
+                  <td>{data.no}</td>
+                  <td>{data.baseDate}</td>
+                  <td>{data.baseTime}</td>
+                  <td>{data.category}</td>
+                  <td>{data.fcstDate}</td>
+                  <td>{data.fcstTime}</td>
+                  <td>{data.fcstValue}</td>
+                  <td>{data.nx}</td>
+                  <td>{data.ny}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </>
+    );
+  }
+  // useEffect(() => {
+  //   getData(); //API 호출
+  // }, []);
 
-  return;
+  return (
+    <>
+      <button onClick={() => getData2()}>btn</button>
+      <Bb />
+    </>
+  );
 }
-export default Test
+export default Test;
