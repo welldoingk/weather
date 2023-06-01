@@ -24,6 +24,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.json:json:20230227'
     implementation 'com.fasterxml.jackson.core:jackson-core:2.15.0'
+    implementation group: 'nl.martijndwars', name: 'web-push', version: '5.1.1'
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.69'
+
     testImplementation 'junit:junit:4.13.1'
     compileOnly 'org.projectlombok:lombok'
     implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.0'

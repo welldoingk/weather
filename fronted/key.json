@@ -1,4 +1,12 @@
-{
-  publicKey: 'BN9X2rTq3P8gfEtUtxRaTRbNsx0IbQKY6o7aLMYfF_0oX8alLbNnXsIWEJ9OJpcnig91OSEoTCBKhmCGUdkMK_0',
-  privateKey: '9g-g8J88Vyq7QoNghpw9_1UeQ45vJ-UJG6rduQw582k'
-}
+[
+  {
+    "os": "mac",
+    "publicKey": "BN9X2rTq3P8gfEtUtxRaTRbNsx0IbQKY6o7aLMYfF_0oX8alLbNnXsIWEJ9OJpcnig91OSEoTCBKhmCGUdkMK_0",
+    "privateKey": "9g-g8J88Vyq7QoNghpw9_1UeQ45vJ-UJG6rduQw582k"
+  },
+  {
+    "os": "wsl",
+    "publicKey": "BCt8g0mhCW9uQlP7V_A2fjz_AGybu6uQG5ZrxGuft6LU97bvfTAwiQNBXg_uNMnx6ss_szKuPDZs1ofRiYJKYa0",
+    "privateKey": "731ug_raPLgIhk9AwLK1eroc-YHYBrubNa_Fad0o7nM"
+  }
+]
