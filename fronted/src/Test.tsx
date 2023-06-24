@@ -4,11 +4,11 @@ import { useState } from "react";
 
 
 function Test() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any[]>([]);
 
   const getData2 = async () => {
     await axios
-      .get("http://localhost:8080/api/get")
+      .get("http://172.30.1.70:8080/api/get")
       .then((res) => setData(res.data));
     console.log(data);
     

@@ -1,15 +1,16 @@
 import axios from "axios";
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("my-sw.js");
-}
 
 function subscription() {
   navigator.serviceWorker.ready.then((registration) => {
     registration.pushManager.getSubscription().then((subscription) => {
       if (subscription) {
         //DB에 저장
-        axios.post("http://localhost:8080/push/subscribe");
+        axios
+          .post("http://172.30.1.70:8080/push/subscribe", subscription)
+          .then(response => {
+            console.log(response);
+          });
       } else {
         registration.pushManager
           .subscribe({
@@ -19,6 +20,11 @@ function subscription() {
           })
           .then((subscription) => {
             //DB에 저장
+            axios
+              .post("http:///172.30.1.70:8080/push/subscribe", subscription)
+              .then((response) => {
+                console.log(response);
+              });
           });
       }
     });

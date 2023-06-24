@@ -1,3 +1,7 @@
+self.addEventListener("install", (e) => {
+  console.log("[Service Worker] Install");
+});
+
 self.addEventListener("push", (event) => {
   console.log("[ServiceWorker] 푸시알림 수신: ", event);
   //Push 정보 조회
